@@ -1,8 +1,8 @@
 Type=Exe
-Form=frmLongi.frm
+Form=frmLongitudinal.frm
 Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#C:\Windows\SysWOW64\stdole2.tlb#OLE Automation
-IconForm="frmLongi"
-Startup="frmLongi"
+IconForm="frmLongitudinal"
+Startup="frmLongitudinal"
 Command32=""
 Name="Proyecto1"
 HelpContextID="0"

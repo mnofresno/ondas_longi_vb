@@ -1,12 +1,12 @@
 VERSION 5.00
-Begin VB.Form frmLongi 
+Begin VB.Form frmLongitudinal 
    Caption         =   "Ondas Longitudinales En un Tubo con Gas (por MMF)"
    ClientHeight    =   7845
    ClientLeft      =   60
    ClientTop       =   450
    ClientWidth     =   11880
    ClipControls    =   0   'False
-   Icon            =   "frmLongi.frx":0000
+   Icon            =   "frmLongitudinal.frx":0000
    LinkTopic       =   "Form1"
    ScaleHeight     =   7845
    ScaleWidth      =   11880
@@ -406,7 +406,7 @@ Begin VB.Form frmLongi
       Width           =   9900
    End
 End
-Attribute VB_Name = "frmLongi"
+Attribute VB_Name = "frmLongitudinal"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
