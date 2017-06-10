@@ -8,6 +8,10 @@ Algunos de éstos programas permiten exportar a CSV para analizar los datos y otr
 
 Ofresco esto como herramienta para los estudiantes/docentes que tengan interés en mostrar en clase o estudiar estos fenómenos simulados o utilizar estos proyectos como base para otras simulaciones más prolijas y completas.
 
-El código tiene varias desprolijidades y comentarios que no pude ni voy a limpiar por completo pero está disponible para que cualquiera que tenga interés lo haga. También estaría encantado de que alguien quiera portar éstos códigos a alguna plataforma/lenguaje más moderno (por ejemplo Python/Javascript, etc) y brindaré mi ayuda para eso si asi se requiere.
+El código fuente tiene varias desprolijidades y comentarios que no pude ni voy a limpiar por completo pero está disponible para que cualquiera que tenga interés lo haga.
 
-Hasta el momento subí 6 proyectos a éste repositorio con el código fuente de todos ellos y sus ejecutables (teniendo en cuenta que hoy en día
+Aceptaré los pull-requests que se soliciten para mejorar el proyecto.
+
+También estaría encantado de que alguien quiera migrar éstos códigos a alguna plataforma/lenguaje más moderno (por ejemplo Python/Javascript, etc) y brindaré mi ayuda para eso si asi se requiere.
+
+Hasta el momento subí 6 proyectos a éste repositorio con el código fuente de todos ellos y sus ejecutables (teniendo en cuenta que hoy en día no está tan a mano el CD de VB6)
