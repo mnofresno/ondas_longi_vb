@@ -1,0 +1,13 @@
+¿De dónde salió todo este código fuente?
+
+Haciendo limpieza de un disco rígido viejo encontré varios programas que había hecho en Visual Basic 6.0 hace varios años cuando estudiaba física.
+
+La mayoría son animaciones que resuelven las ecuaciones de movimiento de diferentes fenómenos físicos utilizando integración numérica. Otros proyectos son simplemente un player que evalúa la solución de alguna ecuación por ejemplo la ecuación de ondas y permite modificar los parámetros de la simulación.
+
+Algunos de éstos programas permiten exportar a CSV para analizar los datos y otros solamente muestran la animación y/o la gráfica.
+
+Ofresco esto como herramienta para los estudiantes/docentes que tengan interés en mostrar en clase o estudiar estos fenómenos simulados o utilizar estos proyectos como base para otras simulaciones más prolijas y completas.
+
+El código tiene varias desprolijidades y comentarios que no pude ni voy a limpiar por completo pero está disponible para que cualquiera que tenga interés lo haga. También estaría encantado de que alguien quiera portar éstos códigos a alguna plataforma/lenguaje más moderno (por ejemplo Python/Javascript, etc) y brindaré mi ayuda para eso si asi se requiere.
+
+Hasta el momento subí 6 proyectos a éste repositorio con el código fuente de todos ellos y sus ejecutables (teniendo en cuenta que hoy en día

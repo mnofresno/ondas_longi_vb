@@ -47,3 +47,5 @@ Permite simular el movimiento de un satélite al rededor de un planeta fijando l
 ## 6-Fluido Viscoso
 
 Muestra una animación + gráfica de posición y velocidad calculando dichos valores a partir de los parámetros iniciales y la integración numérica de la ecuación de movimiento de una partícula esférica suspendida en un fluido viscoso sometida a gravedad.
+
+Author: Mariano Martín Fresno
