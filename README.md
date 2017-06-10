@@ -18,6 +18,8 @@ Para poder ejecutar estos programas es necesario compilarlos e instalar en la PC
 
 ## 5-Orbitas Planetarias
 
+## 6-Fluido Viscoso
+
 # Descripción de cada proyecto:
 
 ## 1-Ondas longitudinales en un tubo con gas
@@ -41,3 +43,7 @@ Simulación animada del movimiento de una partícula suspendida de un péndulo e
 ## 5-Orbitas Planetarias
 
 Permite simular el movimiento de un satélite al rededor de un planeta fijando los parámetros iniciales de posición y velocidad. Muestra gráficas cualitativas y animaciones del movimiento. Utiliza integración numérica para calcular la solución aproximada a la ecuación diferencial de movimiento. Permite seleccionar entre utilizar una fuerza de atracción gravitatoria y una fuerza elástica.
+
+## 6-Fluido Viscoso
+
+Muestra una animación + gráfica de posición y velocidad calculando dichos valores a partir de los parámetros iniciales y la integración numérica de la ecuación de movimiento de una partícula esférica suspendida en un fluido viscoso sometida a gravedad.

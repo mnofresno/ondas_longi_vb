@@ -1,21 +1,21 @@
 Type=Exe
-Form=frmLongitudinal.frm
+Form=frmViscoso.frm
 Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#C:\Windows\SysWOW64\stdole2.tlb#OLE Automation
-IconForm="frmLongitudinal"
-Startup="frmLongitudinal"
+IconForm="frmViscoso"
+Startup="frmViscoso"
 HelpFile=""
-ExeName32="longitudinales.exe"
+ExeName32="viscoso.exe"
 Command32=""
-Name="OndasLongitudinales"
+Name="MovimientoViscoso"
 HelpContextID="0"
-Description="Ondas longitudinales en un tubo"
+Description="Partículas en suspensión en un líquido viscoso"
 CompatibleMode="0"
 MajorVer=1
 MinorVer=0
 RevisionVer=0
 AutoIncrementVer=0
 ServerSupportFiles=0
-VersionCompanyName="Catálisis"
+VersionCompanyName="D. Física - FCEyN - UBA"
 CompilationType=0
 OptimizationType=0
 FavorPentiumPro(tm)=0
@@ -31,3 +31,6 @@ Unattended=0
 Retained=0
 ThreadPerObject=0
 MaxNumberOfThreads=1
+
+[MS Transaction Server]
+AutoRefresh=1
