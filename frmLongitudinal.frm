@@ -11,7 +11,7 @@ Begin VB.Form frmLongitudinal
    ScaleHeight     =   7845
    ScaleWidth      =   11880
    StartUpPosition =   2  'CenterScreen
-   Begin VB.Frame frMarquitos 
+   Begin VB.Frame frMainFrame 
       Caption         =   "Parámetros"
       Height          =   2775
       Left            =   360
@@ -428,9 +428,6 @@ Dim dfdx As Double
 
 Const Kcor = 1000000#
 
-
-Dim AmpS As Double 'Variable sin usar, TODO: automatizar autoscale de amplitud F(modo)
-
 Dim dt As Double
 
 Dim espP, eW, eH As Integer 'Ancho y altura efectivas de la pictureBox
@@ -451,44 +448,34 @@ Dim Amp As Double
 
 
 Function f(xp As Double) As Double
-
-lambda = 2 * Lp / m
-k = 2 * pi / lambda
-
-
- w = k * Cv
-
-f = Amp * Sin(k * xp) * Cos(w * t)
-dfdx = Amp * k * Cos(k * xp) * Cos(w * t)
-'f = Amp * Sin(k * xp) * Cos(w * t) + Amp * Sin(3 * k * xp) * Cos(3 * w * t) + Amp * Sin(5 * k * xp) * Cos(w * t)
-'f = Amp * Sin(k * xp - w * t)
-
+    lambda = 2 * Lp / m
+    k = 2 * pi / lambda
+    w = k * Cv
+    
+    f = Amp * Sin(k * xp) * Cos(w * t)
+    dfdx = Amp * k * Cos(k * xp) * Cos(w * t)
+    'f = Amp * Sin(k * xp) * Cos(w * t) + Amp * Sin(3 * k * xp) * Cos(3 * w * t) + Amp * Sin(5 * k * xp) * Cos(w * t)
+    'f = Amp * Sin(k * xp - w * t)
 End Function
+
 Sub MostrarPs()
-
-eW = pLongi.Width - 2 * espP
-eH = pLongi.Height - espP
-
-On Error Resume Next
+    eW = pLongi.Width - 2 * espP
+    eH = pLongi.Height - espP
+    
+    On Error Resume Next
     pLongi.Cls
-        pTransv.Cls
-
-    Reglita
+    pTransv.Cls
+    DrawRuler
     For i = 0 To Np
         X = i * dX
         pLongi.Line (espP + (f(X) + X / Lp) * eW, (pLongi.Height - Alt) / 2)-(espP + (f(X) + X / Lp) * eW, (pLongi.Height + Alt) / 2), &HFF
-    
-    
-    
     pTransv.PSet (espP + (X / Lp) * (pTransv.Width - espP * 2), (1 / 2 - f(X) * escD / 12) * pTransv.Height), &HFF
     pTransv.PSet (espP + (X / Lp) * (pTransv.Width - espP * 2), (1 / 2 + dfdx * escP / 70) * pTransv.Height), &HFF0000
     
     Next i
 End Sub
 
-
-Sub Reglita()
-
+Sub DrawRuler()
     pTransv.Line (0, pTransv.Height / 2)-(pTransv.Width, pTransv.Height / 2)
     For i = 0 To Np
         X = i * dX
@@ -498,139 +485,128 @@ Sub Reglita()
 End Sub
 
 Private Sub cmdAplica_Click()
-CargarParametros
+    CargarParametros
 End Sub
 
 Private Sub cmdDetener_Click()
-Timer1.Enabled = False
+    Timer1.Enabled = False
 End Sub
 
 Private Sub cmdEqui_Click()
-
-t = pi / (2 * w)
-MostrarPs
+    t = pi / (2 * w)
+    MostrarPs
 End Sub
 
 
 
 Private Sub cmdPaso_Click()
-Timer1_Timer
-
+    Timer1_Timer
 End Sub
 
 Private Sub cmdContinuar_Click()
-Timer1.Enabled = True
+    Timer1.Enabled = True
 End Sub
 Sub CargarParametros()
-On Error Resume Next
-
-
-
-
-
-Np = txtParam(0).Text - 1
-Lp = txtParam(4).Text
-
-pTransv.ScaleMode = vbPixels
-dX = Lp / Np
-pi = Atn(1) * 4
-pLongi.ScaleMode = vbPixels
-Me.ScaleMode = vbPixels
-espP = 60
-
-
-pTransv.DrawWidth = 3
-pLongi.DrawWidth = 1
-Amp = txtParam(6).Text
-k0 = txtParam(1).Text / Kcor
-
- Ro0 = txtParam(2).Text
-dt = txtParam(7).Text
-
-Cv = Sqr(k0 / Ro0)
-C = Sqr((Cv ^ 2) * Kcor)
-txtParam(5).Text = Format(C, "0.00")
-escP = vsP.Value
-escD = vsD.Value
-sldModo_Click
-
+    On Error Resume Next
+    Np = txtParam(0).Text - 1
+    Lp = txtParam(4).Text
+    
+    pTransv.ScaleMode = vbPixels
+    dX = Lp / Np
+    pi = Atn(1) * 4
+    pLongi.ScaleMode = vbPixels
+    Me.ScaleMode = vbPixels
+    espP = 60
+    
+    
+    pTransv.DrawWidth = 3
+    pLongi.DrawWidth = 1
+    Amp = txtParam(6).Text
+    k0 = txtParam(1).Text / Kcor
+    
+     Ro0 = txtParam(2).Text
+    dt = txtParam(7).Text
+    
+    Cv = Sqr(k0 / Ro0)
+    C = Sqr((Cv ^ 2) * Kcor)
+    txtParam(5).Text = Format(C, "0.00")
+    escP = vsP.Value
+    escD = vsD.Value
+    sldModo_Click
 End Sub
 
 Private Sub cmdSalir_Click()
-End
+    End
 End Sub
 
 Private Sub Form_Load()
-txtParam(0) = 30
-txtParam(1) = 141610
-txtParam(2) = 1.225
-txtParam(4) = 0.5
-txtParam(5) = 340
-txtParam(6) = 0.05
-txtParam(7) = 0.05
-CargarParametros
+    txtParam(0) = 30
+    txtParam(1) = 141610
+    txtParam(2) = 1.225
+    txtParam(4) = 0.5
+    txtParam(5) = 340
+    txtParam(6) = 0.05
+    txtParam(7) = 0.05
+    CargarParametros
 End Sub
 
 Private Sub Form_Resize()
-
-pLongi.Left = 3
-pTransv.Left = 3
-
-
-'frMarquitos.Width = Me.Width / Screen.TwipsPerPixelX - 15
-
-
-pLongi.Width = Me.Width / Screen.TwipsPerPixelX - 15
-pTransv.Width = Me.Width / Screen.TwipsPerPixelX - 15
-
-lblD.Left = vsD.Width * 1.1
-lblP.Left = pTransv.Width - lblP.Width * 1.1 - vsP.Width * 1.1
-
-frMarquitos.Left = (Me.Width / Screen.TwipsPerPixelX - frMarquitos.Width) / 2
-frMarquitos.Top = (Me.Height / Screen.TwipsPerPixelY - frMarquitos.Height) - 50
-
-vsD.Left = 0
-vsP.Left = pTransv.Width - vsP.Width * 1.1 - 2
-vsD.Height = pTransv.Height - 3
-vsP.Height = pTransv.Height - 3
+    pLongi.Left = 3
+    pTransv.Left = 3
+    
+    'frMainFrame.Width = Me.Width / Screen.TwipsPerPixelX - 15
+    
+    pLongi.Width = Me.Width / Screen.TwipsPerPixelX - 15
+    pTransv.Width = Me.Width / Screen.TwipsPerPixelX - 15
+    
+    lblD.Left = vsD.Width * 1.1
+    lblP.Left = pTransv.Width - lblP.Width * 1.1 - vsP.Width * 1.1
+    
+    frMainFrame.Left = (Me.Width / Screen.TwipsPerPixelX - frMainFrame.Width) / 2
+    frMainFrame.Top = (Me.Height / Screen.TwipsPerPixelY - frMainFrame.Height) - 50
+    
+    vsD.Left = 0
+    vsP.Left = pTransv.Width - vsP.Width * 1.1 - 2
+    vsD.Height = pTransv.Height - 3
+    vsP.Height = pTransv.Height - 3
 End Sub
 
 Private Sub sldModo_Click()
-m = sldModo.Value
-txtParam(3).Text = Format((C * m) / (2 * Lp), "0.00")
-lblModo = "Modo: " & m
-txtParam(8).Text = Format(lambda, "0.00")
-txtParam(9).Text = Format(k, "0.00")
+    m = sldModo.Value
+    txtParam(3).Text = Format((C * m) / (2 * Lp), "0.00")
+    lblModo = "Modo: " & m
+    txtParam(8).Text = Format(lambda, "0.00")
+    txtParam(9).Text = Format(k, "0.00")
 End Sub
 
 Private Sub sldModo_Change()
-sldModo_Click
+    sldModo_Click
 End Sub
 
 Private Sub sldModo_MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)
-sldModo_Click
+    sldModo_Click
 End Sub
 
 Private Sub sldModo_MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)
-sldModo_Click
+    sldModo_Click
 End Sub
 
 Private Sub Timer1_Timer()
-t = t + dt
-MostrarPs
-Label1.Caption = "Tiempo t=" & Format(t, "0.00")
-CargarParametros
+    t = t + dt
+    MostrarPs
+    Label1.Caption = "Tiempo t=" & Format(t, "0.00")
+    CargarParametros
 End Sub
 
 Private Sub vsD_Change()
-escD = vsD.Value
+    escD = vsD.Value
 End Sub
 
 Private Sub vsP_Change()
-escP = vsP.Value
+    escP = vsP.Value
 End Sub
 
 Private Sub vsTiempo_Change()
-Timer1.Interval = vsTiempo.Value
-Label2.Caption = "T=" & Timer1.Interval
+    Timer1.Interval = vsTiempo.Value
+    Label2.Caption = "T=" & Timer1.Interval
 End Sub
