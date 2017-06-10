@@ -1,4 +1,4 @@
-Attribute VB_Name = "Funciones"
+Attribute VB_Name = "library"
 
 'API para generar tiempo de delay en la ejecucion de un programa
 Public Declare Function GetTickCount Lib "kernel32" () As Long

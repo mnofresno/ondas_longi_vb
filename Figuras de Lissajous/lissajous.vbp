@@ -1,12 +1,14 @@
 Type=Exe
-Form=main.frm
+Form=frmLissajous.frm
 Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#C:\Windows\SysWOW64\stdole2.tlb#OLE Automation
-IconForm="frmLisaj"
-Startup="frmLisaj"
+IconForm="frmLissajous"
+Startup="frmLissajous"
+HelpFile=""
 ExeName32="lissajous.exe"
 Command32=""
 Name="Lissajous"
 HelpContextID="0"
+Description="Suma de dos movimientos armónicos"
 CompatibleMode="0"
 MajorVer=1
 MinorVer=0

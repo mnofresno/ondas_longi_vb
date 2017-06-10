@@ -1,6 +1,6 @@
 VERSION 5.00
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCTL.OCX"
-Begin VB.Form frmTransv 
+Begin VB.Form frmTransversales 
    Caption         =   "Ondas Transversales en Una Cuerda Tensa"
    ClientHeight    =   6105
    ClientLeft      =   60
@@ -390,7 +390,7 @@ Begin VB.Form frmTransv
       Width           =   450
    End
 End
-Attribute VB_Name = "frmTransv"
+Attribute VB_Name = "frmTransversales"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True

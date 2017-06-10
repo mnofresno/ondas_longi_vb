@@ -1,5 +1,5 @@
 VERSION 5.00
-Begin VB.Form Form1 
+Begin VB.Form frmOrbitas 
    Caption         =   "Simulación de órbitas planetarias"
    ClientHeight    =   5310
    ClientLeft      =   60
@@ -396,7 +396,7 @@ Begin VB.Form Form1
       Width           =   1080
    End
 End
-Attribute VB_Name = "Form1"
+Attribute VB_Name = "frmOrbitas"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
@@ -453,7 +453,7 @@ picGtita.Cls
     kConst = inicial(6)
     lNat = inicial(7)
 
-col.visible = False
+col.Visible = False
 'Err.Visible = False
 
 On Error GoTo err
@@ -535,7 +535,7 @@ End If
         Exit Sub
 err:
 'Debug.Print "ERROR"
-col.visible = True
+col.Visible = True
 Exit Sub
 Resume Next
 

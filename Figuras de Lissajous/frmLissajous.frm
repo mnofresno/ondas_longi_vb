@@ -1,5 +1,5 @@
 VERSION 5.00
-Begin VB.Form frmLisaj 
+Begin VB.Form frmLissajous 
    Caption         =   "curvas de lissajous"
    ClientHeight    =   6255
    ClientLeft      =   60
@@ -175,7 +175,7 @@ Begin VB.Form frmLisaj
       Width           =   840
    End
 End
-Attribute VB_Name = "frmLisaj"
+Attribute VB_Name = "frmLissajous"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True

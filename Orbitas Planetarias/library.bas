@@ -1,4 +1,4 @@
-Attribute VB_Name = "sys_mod"
+Attribute VB_Name = "library"
 Option Explicit
 
 Public Const MAX_PATH = 260

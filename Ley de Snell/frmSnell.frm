@@ -1,5 +1,5 @@
 VERSION 5.00
-Begin VB.Form frmMain 
+Begin VB.Form frmSnell 
    Caption         =   "Ley de Snell"
    ClientHeight    =   5655
    ClientLeft      =   60
@@ -328,7 +328,7 @@ Begin VB.Form frmMain
       Width           =   375
    End
 End
-Attribute VB_Name = "frmMain"
+Attribute VB_Name = "frmSnell"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
