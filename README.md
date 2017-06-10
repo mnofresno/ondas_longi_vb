@@ -1,7 +1,15 @@
 # Contenido del repositorio:
 
-1-Ondas Longitudinales
-2-Ondas Transversales
+El presente repositorio contiene proyectos de simulación numérica animada hechos en Visual Basic 6.0 realizados con fines educativos
+
+# Contenido:
+# Ondas Longitudinales
+
+# Ondas Transversales
+
+# Figuras de Lissajous
+
+# Descripción de cada proyecto:
 
 # Ondas longitudinales en un tubo con gas
 
@@ -13,5 +21,8 @@ Proyecto realizado en el año 2011
 
 # Ondas transversales de frecuencias compuestas
 
-Simulación numérica animada de ondas en una cuerda tensa con suma de hasta 7 múltiplos de frecuencias
+Simulación numérica animada de ondas en una cuerda tensa. Permite sumar hasta 7 múltiplos de frecuencias.
 
+# Figuras de Lissajous
+
+Es una simulación que permite conocer las figuras de lissajous y sus variantes en función de la suma de dos movimientos armónicos en los ejes X e Y
