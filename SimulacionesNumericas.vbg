@@ -1,0 +1,8 @@
+VBGROUP 5.0
+Project=Ondas Longitudinales\Longitudinal.vbp
+Project=Ondas Transversales\Transversal.vbp
+Project=Orbitas Planetarias\Orbitas.vbp
+Project=Pendulo Elastico\Pendulo.vbp
+Project=Ley de Snell\Snell.vbp
+Project=Fluido Viscoso\Viscoso.vbp
+Project=Figuras de Lissajous\Lissajous.vbp
