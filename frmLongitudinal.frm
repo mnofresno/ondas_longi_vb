@@ -451,7 +451,6 @@ Function f(xp As Double) As Double
     lambda = 2 * Lp / m
     k = 2 * pi / lambda
     w = k * Cv
-    
     f = Amp * Sin(k * xp) * Cos(w * t)
     dfdx = Amp * k * Cos(k * xp) * Cos(w * t)
     'f = Amp * Sin(k * xp) * Cos(w * t) + Amp * Sin(3 * k * xp) * Cos(3 * w * t) + Amp * Sin(5 * k * xp) * Cos(w * t)
@@ -469,9 +468,8 @@ Sub MostrarPs()
     For i = 0 To Np
         X = i * dX
         pLongi.Line (espP + (f(X) + X / Lp) * eW, (pLongi.Height - Alt) / 2)-(espP + (f(X) + X / Lp) * eW, (pLongi.Height + Alt) / 2), &HFF
-    pTransv.PSet (espP + (X / Lp) * (pTransv.Width - espP * 2), (1 / 2 - f(X) * escD / 12) * pTransv.Height), &HFF
-    pTransv.PSet (espP + (X / Lp) * (pTransv.Width - espP * 2), (1 / 2 + dfdx * escP / 70) * pTransv.Height), &HFF0000
-    
+        pTransv.PSet (espP + (X / Lp) * (pTransv.Width - espP * 2), (1 / 2 - f(X) * escD / 12) * pTransv.Height), &HFF
+        pTransv.PSet (espP + (X / Lp) * (pTransv.Width - espP * 2), (1 / 2 + dfdx * escP / 70) * pTransv.Height), &HFF0000
     Next i
 End Sub
 
@@ -497,8 +495,6 @@ Private Sub cmdEqui_Click()
     MostrarPs
 End Sub
 
-
-
 Private Sub cmdPaso_Click()
     Timer1_Timer
 End Sub
@@ -506,6 +502,7 @@ End Sub
 Private Sub cmdContinuar_Click()
     Timer1.Enabled = True
 End Sub
+
 Sub CargarParametros()
     On Error Resume Next
     Np = txtParam(0).Text - 1
