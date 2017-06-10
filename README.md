@@ -4,7 +4,7 @@ El presente repositorio contiene proyectos de simulación numérica animada hech
 
 La mayor parte de éstos proyectos fueron realizados hace más de 7 años y los estoy recopilando ahora para poderlos publicar todos juntos.
 
-Para poder ejecutar estos programas es necesario compilarlos e instalar en la PC los runtimes de Visual Basic 6.0
+Para poder ejecutar estos programas es necesario compilarlos e instalar en la PC los runtimes de Visual Basic 6.0 https://www.microsoft.com/en-us/download/details.aspx?id=24417
 
 # Contenido:
 
@@ -40,4 +40,4 @@ Simulación animada del movimiento de una partícula suspendida de un péndulo e
 
 ## 5-Orbitas Planetarias
 
-Permite simular el movimiento de un satélite al rededor de un planeta fijando los parámetros iniciales de posición y velocidad. Muestra gráficas cualitativas y animaciones del movimiento utiliza integración numérica para calcular la solución aproximada a la ecuación diferencial de movimiento. Permite seleccionar entre utilizar una fuerza de atracción gravitatoria y una fuerza elástica.
+Permite simular el movimiento de un satélite al rededor de un planeta fijando los parámetros iniciales de posición y velocidad. Muestra gráficas cualitativas y animaciones del movimiento. Utiliza integración numérica para calcular la solución aproximada a la ecuación diferencial de movimiento. Permite seleccionar entre utilizar una fuerza de atracción gravitatoria y una fuerza elástica.
