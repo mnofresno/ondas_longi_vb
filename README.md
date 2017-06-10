@@ -1,4 +1,4 @@
-# Contenido del repositorio:
+# DESCRIPCION:
 
 El presente repositorio contiene proyectos de simulación numérica animada hechos en Visual Basic 6.0 realizados con fines educativos
 
@@ -6,7 +6,7 @@ La mayor parte de éstos proyectos fueron realizados hace más de 7 años y los 
 
 Para poder ejecutar estos programas es necesario compilarlos e instalar en la PC los runtimes de Visual Basic 6.0 https://www.microsoft.com/en-us/download/details.aspx?id=24417
 
-# Contenido:
+# TOC:
 
 ## 1-Ondas Longitudinales
 
